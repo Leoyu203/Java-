@@ -6,29 +6,38 @@ class Main {
 	}
 
   void init(){
-	print("hello");
-	double c
+	double c = FtoC(100);
+	system.out.println(c);
+	
+	double sv = sphereVolume(10);
+	system.out.println(sv);
+	
+	double cv = coneVolume(10,20);
+	system.out.println(cv);
+	
+	double d = distance(1,2,3,4);
+	system.out.println(d);
 	}
 	void print(String msg){
 		System.out.println(msg);
 	}
-	double FtoC(double fahrenheit) {
-		C = (fahrenheit - 32) * 5.0 / 9.0;
-		return C;
+	double FtoC(double F) {
+		double c = (F - 32) * 5.0 / 9.0;
+		return
 	}
 
 	double sphereVolume(double r){
-		V = (4.0/3) * (Math.PI) * Math.pow(r,3);
-		return V;
+		double v = (4.0/3) * (Math.PI) * Math.pow(r,3);
+		return v;
 	}
 
 	double coneVolume(double r, double h){
-		CV = (Math.PI)*(Math.pow(r,2))*(h/3.0);
-		return CV;
+		double a = (Math.PI)*(Math.pow(r,2))*(h/3.0);
+		return a;
 	}
 
 	double distance(double x1, double y1, double x2, double y2){
-		d = Math.sqrt(Math.pow(x2-x1,2)-Math.pow(y2-y1,2));
+		double d = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
 		return d;
 	}
 
