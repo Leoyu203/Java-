@@ -33,7 +33,7 @@ class Main {
 	}
 
 	double coneVolume(double r, double h){
-		double a = (Math.PI)*(Math.pow(r,2))*(h/3.0);
+		double a = (Math.PI)*(Math.pow(r,2))*h * (1.0/3.0);
 		return a;
 	}
 
