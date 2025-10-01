@@ -7,23 +7,24 @@ class Main {
 
   void init(){
 	double c = FtoC(100);
-	system.out.println(c);
+	System.out.println(c);
 	
 	double sv = sphereVolume(10);
-	system.out.println(sv);
+	System.out.println(sv);
 	
 	double cv = coneVolume(10,20);
-	system.out.println(cv);
+	System.out.println(cv);
 	
 	double d = distance(1,2,3,4);
-	system.out.println(d);
+	System.out.println(d);
 	}
 	void print(String msg){
 		System.out.println(msg);
 	}
-	double FtoC(double F) {
+	
+	double FtoC(double F){
 		double c = (F - 32) * 5.0 / 9.0;
-		return
+		return c;
 	}
 
 	double sphereVolume(double r){
