@@ -27,9 +27,8 @@ class Main {
     }
   }
 
-  String pigLatin(String l){
-    int pos = l.indexOf(0,1)
-    return l.substring(1)+pos+"ay";
+  String pigLatin(String l){  
+    return l.substring(1)+l.substring(0,1)+"ay";
   }
 
   
