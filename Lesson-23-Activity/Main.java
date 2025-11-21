@@ -37,4 +37,25 @@ class Main {
     else
       return false;
   }
+  double total(double[] prices){
+    double sum=0;
+    for(int i = 0; i<prices.length; i++){
+      sum+=prices[i] + prices[i]*0.08525;
+    }
+    return sum;
+  }
+  int isin
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
