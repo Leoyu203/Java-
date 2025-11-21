@@ -32,9 +32,8 @@ class Main {
   //Problem 2
   // Write a function called avgArray that accepts an array of integers and
   // returns the average of the values in the array
-  double avgArray(double[] nums){
-    int sum = sumArray(nums);
-    return (double)sum / nums.length;
+  double avgArray(int[] nums){
+    return (double)sumArray(nums) / nums.length;
   }
 
 
@@ -47,8 +46,18 @@ class Main {
   // Return the quiz grade by counting the number of correct answers divided by
   // the number of quistions.
 
-  double quizGrader(char[] stuAns , char[] Ans){
-    
+  double[] quizGrader(char[] stuAns , char[] Ans){
+    double correctAns = 0;
+    for(int i = 0; i<Ans.length;i++){
+      if(stuAns[i]==Ans[i]){
+        correctAns ++;
+      }
+    }
+    return correctAns / Ans.length;
+
+
+  }
+
   }
 
   
