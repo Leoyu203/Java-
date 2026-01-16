@@ -29,14 +29,13 @@ class Student{
     return sum/this.grades.length;
   }
 
-  boolean checkCourse(String[] courses){
-    for(int i=0; i<courses.length; i++){
-        if(courses[i].equalsTo(this.courses[i])){
+  boolean checkCourse(String course){
+    for(int i=0; i<this.courses.length; i++){
+        if(course.equals(this.courses[i])){
           return true;
         }
       }
-  }else{
-    return false;
   }
+  return false;
 }
-
+    
