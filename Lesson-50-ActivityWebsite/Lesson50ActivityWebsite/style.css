@@ -1,99 +1,272 @@
-html,body{
-  margin:0 auto;
-  font-family:Arial;
-}
-.container{
-  display:flex;
-  padding:10px;
-}
-.center{
-  justify-content:center;
-  align-items:center;
-}
-
-nav{
-  background-color:cornflowerblue;
-}
-nav a{
-  color:black;
-  padding:10px;
-  flex:1;
-  text-decoration:none;
-  text-align:center;
-}
-nav a:hover{
-  color:white;
-}
-.subbanner{
-  background-color:cornflowerblue;
-}
-#banner{
-  background-color:blue;
-  color:white;
-}
-#footer{
-  background-color:cornflowerblue;
-  color:white;
-  /*position:fixed;*/
-  left: 0;
-  right: 0;
-  bottom:0px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
  
-
-.highlight{
-  font-style:italic;
-  color:blue;
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: #f0f4f8;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.heading{
-  font-weight:bold;
+ 
+/* ===== HEADER ===== */
+#header {
+  background-color: #4a90d9;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
-.card a{
-  text-decoration:none;
-  background-color:blue;
-  color:white;
-  border-radius:4px;
-  padding:6px;
-  box-shadow:2px 2px 2px black;
+ 
+#header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
-.card a:hover{
-  background-color:cornflowerblue;
+ 
+/* ===== NAV BAR ===== */
+#nav {
+  background-color: white;
+  border-bottom: 2px solid #ddd;
+  display: flex;
+  gap: 0;
+  text-align:center;
 }
-#panel{
-  flex:1;
-}
-
-.card img{
-  width:90%;
-}
-.filter{
-  display:flex;
-  background-color: #dff2ff;
-  border:1px solid black;
+ 
+.navlink {
+  text-decoration: none;
+  color: #999;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 14px 30px;
+  letter-spacing: 1px;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 3px solid transparent;
   
 }
-
-#output {
+ 
+.navlink:hover {
+  color: #4a90d9;
+}
+ 
+.navlink.active {
+  color: #4a90d9;
+  border-bottom: 3px solid #4a90d9;
+}
+ 
+/* ===== FOOTER ===== */
+#footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+  background: white;
+}
+ 
+/* ===================== */
+/* ===== INDEX PAGE ===== */
+/* ===================== */
+ 
+.main-container {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+ 
+.info-box {
+  flex: 2;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 25px;
+}
+ 
+.info-box h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #4a90d9;
+}
+ 
+.info-box h3 {
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+ 
+.info-box p {
+  line-height: 1.6;
+  color: #444;
+}
+ 
+.info-box ul {
+  padding-left: 20px;
+  line-height: 2;
+  color: #444;
+}
+ 
+.ships-preview {
+  flex: 1;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 25px;
+}
+ 
+.ships-preview h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #4a90d9;
+}
+ 
+.ship-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+  color: #333;
+}
+ 
+.ship-item:last-child {
+  border-bottom: none;
+}
+ 
+/* ========================= */
+/* ===== PACKAGES PAGE ===== */
+/* ========================= */
+ 
+.search-bar {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+ 
+.search-bar input {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: 2px solid #4a90d9;
+  border-radius: 6px;
+  width: 280px;
+  outline: none;
+  font-family: inherit;
+}
+ 
+#resultCount {
+  color: #777;
+  font-size: 0.9rem;
+}
+ 
+.cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  gap: 24px;
+  padding: 30px;
+  justify-content: flex-start;
+}
+ 
+.loading-msg, .error-msg, .no-results {
+  color: #888;
+  font-size: 1rem;
   padding: 20px;
-  background: #f3f3f3;
 }
-
-.card {
-  width: 100px;
-  background: rgb(240, 210, 164);
-  padding: 15px;
-  border-radius: 15px;
-  box-shadow: 0 5px 8px rgba(0,0,0,0.2);
+ 
+.error-msg {
+  color: #c0392b;
 }
-
-.card h3 {
-  font-size: 20px;
+ 
+/* ===== FLIP CARDS ===== */
+.flip-card {
+  width: 260px;
+  height: 340px;
+  perspective: 1000px;
+  cursor: pointer;
 }
-
-.card p {
-  font-size: 15px;
+ 
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+ 
+/* When .flipped is added by JS, rotate the inner */
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+ 
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+ 
+/* FRONT */
+.flip-card-front {
+  background: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+ 
+.flip-card-front h3 {
+  font-size: 1rem;
+  color: #4a90d9;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+ 
+.flip-card-front p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.5;
+}
+ 
+.flip-hint {
+  margin-top: auto;
+  font-size: 0.75rem;
+  color: #bbb;
+  text-align: right;
+}
+ 
+/* BACK */
+.flip-card-back {
+  background: #1a1a2e;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+ 
+.flip-card-back img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+ 
+.flip-card-back p {
+  color: white;
+  font-weight: bold;
+  font-size: 0.95rem;
+  padding: 0 10px 10px;
+  text-align: center;
 }

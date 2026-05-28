@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <!-- We need to import JQUERY Library to make the api call-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <script src="script.js"></script>
-   </head>
-  <body id="body" onload="init()">
-    <div id="banner" class="container center">
-      <h1> Activity 50 </h1>
+<head>
+  <title>Cruise Ship Packages</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+ 
+<body>
+ 
+  <!-- HEADER -->
+  <div id="header">
+    <h1>Cruise Ship Packages</h1>
+  </div>
+ 
+  <!-- NAV BAR -->
+  <nav id="nav">
+    <a href="index.html" class="navlink active">INFO PAGE</a>
+    <a href="packages.html" class="navlink">PACKAGES</a>
+    <a href="jail.html" class="navlink">JAIL</a>
+  </nav>
+ 
+  <!-- MAIN CONTENT -->
+  <div class="main-container">
+ 
+    <div class="info-box">
+      <h2>Welcome to Cruise Ship Packages!</h2>
+      <p>
+        This website lets you explore cruise ship vacation packages from top cruise lines.
+        Browse ships, destinations, and pricing all in one place.
+      </p>
+      <h3>What you can do here:</h3>
+      <br>
+        <p>Search for cruise packages by ship name</p>
+        <p>See destinations and pricing</p>
+        <p>Flip cards to view ship images</p>
+        <p>View booking details like passenger name and price</p>
+      </br>
+      <h3>How to search:</h3>
+      <p>
+        Head to the <strong>PACKAGES</strong> page and type a ship name in the search bar.
+        Cards will appear showing booking info on the front and a ship photo on the back.
+        Click any card to flip it!
+      </p>
     </div>
-    <div class="container subbanner">
-      <div>
-        <p> Here is a list of songs in the chinook database.
-        </p>
+ 
+    <div class="ships-preview">
+      <h2>Featured Ships</h2>
+      <div class="ship-list">
+        <div class="ship-item">Wonder of the Seas</div>
+        <div class="ship-item">Freedom of the Sea</div>
+        <div class="ship-item">Voyagers of the Seas</div>
+        <img src="https://images.builderservices.io/s/cdn/v1.0/i/m?url=https%3A%2F%2Fstorage.googleapis.com%2Fproduction-domaincom-v1-0-2%2F222%2F676222%2FyY04NsEI%2F39f872eba2f344f2a68625b49632ca72&methods=resize%2C1000%2C5000" height="300px" width="200" style="padding:5px;" alt="Featured Ship">
       </div>
     </div>
-  <!-- Create a container to display results -->
-  <div id='output'></div>
-      
-      
-  </body>
+ 
+  </div>
+ 
+  <!-- FOOTER -->
+  <div id="footer">
+    <p>Copyright &copy; jerryleonaekosealines</p>
+  </div>
+ 
+</body>
 </html>
