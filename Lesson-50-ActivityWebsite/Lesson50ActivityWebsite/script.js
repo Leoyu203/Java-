@@ -35,13 +35,13 @@ function displayPackages(bookings) {
  
           <!-- FRONT: booking info -->
           <div class="flip-card-front">
-            <h3>📋 Booking Details</h3>
+            <h3>Booking Details</h3>
             <p><strong>First Name:</strong> ${pkg.fname}</p>
             <p><strong>Last Name:</strong> ${pkg.lname}</p>
             <p><strong>Destination:</strong> ${pkg.destination}</p>
             <p><strong>Ship Name:</strong> ${pkg.line}</p>
             <p><strong>Price:</strong> $${pkg.cost}</p>
-            <span class="flip-hint">Click to flip ↻</span>
+            <span class="flip-hint">Click to flip</span>
           </div>
  
           <!-- BACK: ship image -->

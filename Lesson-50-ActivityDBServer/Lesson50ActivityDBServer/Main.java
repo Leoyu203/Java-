@@ -52,6 +52,9 @@ class Main {
     // Visit: /ships
     String sqlShips = "SELECT * FROM ships";
     server.createContext("/ships", new RouteHandler(db, sqlShips));
+
+    String sqlJail = "SELECT * FROM jail";
+    server.createContext("/jail", new RouteHandler(db, sqlJail));
  
     // =====================
     // ROUTE 3: Search bookings by cruise line (INNER JOIN)
@@ -65,6 +68,7 @@ class Main {
   "INNER JOIN ships ON bookings.line = ships.cruise_line";
  
     server.createContext("/search", new RouteHandler(db, sqlSearch));
+
  
     // Start server
     server.start();

@@ -13,7 +13,6 @@ body {
   flex-direction: column;
 }
  
-/* ===== HEADER ===== */
 #header {
   background-color: #4a90d9;
   color: white;
@@ -27,7 +26,6 @@ body {
   letter-spacing: 1px;
 }
  
-/* ===== NAV BAR ===== */
 #nav {
   background-color: white;
   border-bottom: 2px solid #ddd;
@@ -57,7 +55,6 @@ body {
   border-bottom: 3px solid #4a90d9;
 }
  
-/* ===== FOOTER ===== */
 #footer {
   text-align: center;
   padding: 20px;
@@ -68,9 +65,7 @@ body {
   background: white;
 }
  
-/* ===================== */
-/* ===== INDEX PAGE ===== */
-/* ===================== */
+
  
 .main-container {
   display: flex;
@@ -137,9 +132,6 @@ body {
   border-bottom: none;
 }
  
-/* ========================= */
-/* ===== PACKAGES PAGE ===== */
-/* ========================= */
  
 .search-bar {
   padding: 20px 30px;
@@ -183,7 +175,7 @@ body {
   color: #c0392b;
 }
  
-/* ===== FLIP CARDS ===== */
+
 .flip-card {
   width: 260px;
   height: 340px;
@@ -199,7 +191,6 @@ body {
   transform-style: preserve-3d;
 }
  
-/* When .flipped is added by JS, rotate the inner */
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
