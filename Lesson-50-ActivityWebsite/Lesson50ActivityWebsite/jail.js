@@ -30,12 +30,14 @@ function displayJail(records) {
     let p = records[i];
  
     output += `
-      <div class="jail-card">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
         <h3>${p.fname} ${p.lname}</h3>
         <p>Conviction:${p.conviction}</p>
         <p>Entered:${p.tenter}</p>
         <p>Exit: ${p.texit}</p>
       </div>
+    </div>
     `;
   }
  
