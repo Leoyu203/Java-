@@ -3,17 +3,12 @@ let allPackages = [];
  
 async function init() {
   let link = "https://potential-doodle-9759v5v7gjr5376w-8500.app.github.dev/";
-   let route = "search";
+  let route = "search";
+  let response = await fetch(link + route);
+  allPackages = await response.json();
+  displayPackages(allPackages);
  
-  try {
-    let response = await fetch(link + route);
-    allPackages = await response.json();
-    console.log(allPackages);
-    displayPackages(allPackages);
-  } catch (error) {
-    document.getElementById("output").innerHTML = "<p class='error-msg'>Could not load packages. Is the server running?</p>";
-    console.error("Error fetching data:", error);
-  }
+  
 }
  
 function displayPackages(bookings) {
@@ -38,7 +33,7 @@ function displayPackages(bookings) {
             <h3>Booking Details</h3>
             <p><strong>First Name:</strong> ${pkg.fname}</p>
             <p><strong>Last Name:</strong> ${pkg.lname}</p>
-            <p><strong>Destination:</strong> ${pkg.destination}</p>
+            <p><strong>Destination:</strong> ${pkg.Destination}</p>
             <p><strong>Ship Name:</strong> ${pkg.line}</p>
             <p><strong>Price:</strong> $${pkg.cost}</p>
             <span class="flip-hint">Click to flip</span>

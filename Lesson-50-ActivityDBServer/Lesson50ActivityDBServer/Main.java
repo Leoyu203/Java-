@@ -61,10 +61,10 @@ class Main {
     // =====================
     // Visit: /search?cruise_line=Wonder Of The Seas
     String sqlSearch = 
-  "SELECT bookings.fname, bookings.lname, bookings.Destination, " +
-  "bookings.line, bookings.cost, " +
-  "ships.image_url, ships.capacity, ships.home_port " +
-  "FROM bookings " +
+  "SELECT bookings.fname, bookings.lname, bookings.Destination, " 
+  "bookings.line, bookings.cost, " 
+  "ships.image_url, ships.capacity, ships.home_port " 
+  "FROM bookings " 
   "INNER JOIN ships ON bookings.line = ships.cruise_line";
  
     server.createContext("/search", new RouteHandler(db, sqlSearch));

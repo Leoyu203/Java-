@@ -4,16 +4,12 @@ let allJail = [];
 async function init() {
   let link = "https://potential-doodle-9759v5v7gjr5376w-8500.app.github.dev/";
   let route = "jail";
+  let response = await fetch(link + route);
+  allJail = await response.json();
+  displayJail(allJail);
+  
  
-  try {
-    let response = await fetch(link + route);
-    allJail = await response.json();
-    console.log(allJail);
-    displayJail(allJail);
-  } catch (error) {
-    document.getElementById("output").innerHTML = "<p class='error-msg'>Could not load jail data. Is the server running?</p>";
-    console.error("Error fetching data:", error);
-  }
+  
 }
  
 function displayJail(records) {
