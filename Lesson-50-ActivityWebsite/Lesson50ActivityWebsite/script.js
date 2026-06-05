@@ -28,7 +28,7 @@ function displayPackages(bookings) {
       <div class="flip-card" onclick="this.classList.toggle('flipped')">
         <div class="flip-card-inner">
  
-          <!-- FRONT: booking info -->
+          
           <div class="flip-card-front">
             <h3>Booking Details</h3>
             <p><strong>First Name:</strong> ${pkg.fname}</p>
@@ -36,10 +36,9 @@ function displayPackages(bookings) {
             <p><strong>Destination:</strong> ${pkg.Destination}</p>
             <p><strong>Ship Name:</strong> ${pkg.line}</p>
             <p><strong>Price:</strong> $${pkg.cost}</p>
-            <span class="flip-hint">Click to flip</span>
           </div>
  
-          <!-- BACK: ship image -->
+        
           <div class="flip-card-back">
             <img src="${pkg.image_url}" alt="${pkg.line}" />
             <p>${pkg.line}</p>
@@ -53,7 +52,6 @@ function displayPackages(bookings) {
   document.getElementById("output").innerHTML = output;
 }
  
-// Filter cards based on search input
 function filterPackages() {
   let searchText = document.getElementById("searchInput").value.toLowerCase();
  
